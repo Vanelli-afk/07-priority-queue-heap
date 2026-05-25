@@ -2,20 +2,20 @@ package br.univali.hospitalqueue.model;
 
 /**
  * Represents a hospital patient with clinical triage parameters.
- * Implements {@link Comparable} to establish priority routing based on Manchester triage rules.
+ * Implements Comparable to establish priority routing based on Manchester triage rules.
  * * @author Miguel Vanelli
  * @version 1.0
  * @see Person
  */
 public class Patient extends Person implements Comparable<Patient>{
 
-    /** The clinical urgency level ranging from 1 (lowest) to 5 (highest). */
+    /** The clinical urgency level ranging from 1 to 5. */
     private int urgencyLevel;
     
     /** Cumulative waiting time spent by the patient in minutes. */
     private int waitTimeMinutes;
     
-    /** Flag identifying whether the patient belongs to a legally vulnerable age demographic. */
+    /** Flag identifying whether the patient belongs to a legally vulnerable group. */
     private boolean vulnerableGroup;
 
     /**
@@ -55,7 +55,7 @@ public class Patient extends Person implements Comparable<Patient>{
     }
     
     /**
-     * Checks if the patient is marked under priority demographic groups.
+     * Checks if the patient belongs to a vulnerable group.
      *
      * @return true if vulnerable, false otherwise
      */
@@ -66,7 +66,7 @@ public class Patient extends Person implements Comparable<Patient>{
     /**
      * Updates the clinical urgency score.
      *
-     * @param urgencyLevel the new urgency level (1-5)
+     * @param urgencyLevel the new urgency level
      */
     public void setUrgencyLevel(int urgencyLevel){
         this.urgencyLevel = urgencyLevel;
@@ -91,17 +91,10 @@ public class Patient extends Person implements Comparable<Patient>{
     }
     
     /**
-     * Compares this patient with another to establish sorting weights inside a Max-Heap.
-     * Structural breakdown uses cascading criteria:
-     * <ol>
-     * <li>Urgency level (Higher urgency goes first)</li>
-     * <li>Waiting Time (Longer wait goes first)</li>
-     * <li>Vulnerability demographic status (Vulnerable goes first)</li>
-     * </ol>
+     * Compares this patient with another to establish sorting weights.
      *
      * @param other the target patient instance to compare against
-     * @return a negative integer, zero, or a positive integer as this object
-     * is less than, equal to, or greater than the specified object.
+     * @return a negative integer, zero, or a positive integer
      */
     @Override
     public int compareTo(Patient other) {

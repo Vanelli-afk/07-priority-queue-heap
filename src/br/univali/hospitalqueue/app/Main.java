@@ -6,8 +6,7 @@ import br.univali.hospitalqueue.model.Patient;
 
 /**
  * Console entry-point interface orchestration pipeline for managing patient triage flows.
- * Handles continuous operational terminal menus and runtime inputs safely.
- * * @author Miguel Vanelli
+ * * @author Your Name
  * @version 1.0
  */
 public class Main {
@@ -73,7 +72,6 @@ public class Main {
 
     /**
      * Prompts terminal configurations inputs to register a new Patient entity into the heap.
-     * Automatically applies string capitalization normalization algorithms on input text.
      *
      * @param queue references targeted priority heap instance
      */
@@ -124,7 +122,6 @@ public class Main {
 
     /**
      * Sequentially scans active tracking arrays for matching name properties.
-     * Case-insensitive matching loops ensure accurate lookups.
      *
      * @param queue references targeted priority heap instance
      */
@@ -159,7 +156,6 @@ public class Main {
 
     /**
      * Loops through tracking indexes to format output visibility.
-     * Remaps absolute positions starting at human-readable index 1.
      *
      * @param queue references targeted priority heap instance
      */
@@ -180,7 +176,6 @@ public class Main {
 
     /**
      * Utility parser method ensuring text strings maintain standardized name capitalization structures.
-     * Transforms inputs like "mArIa sIlVa" into sanitized formats like "Maria Silva".
      *
      * @param str raw input string text values target
      * @return transformed text matching Title Case guidelines

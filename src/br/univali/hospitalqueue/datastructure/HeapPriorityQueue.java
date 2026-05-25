@@ -2,7 +2,6 @@ package br.univali.hospitalqueue.datastructure;
 
 /**
  * A standard generic Max-Heap structure representing a Priority Queue.
- * Array tracking ensures log(n) operational limits during data mutations.
  * * @param <T> bounded parameter extending Comparable
  * @author Miguel Vanelli
  * @version 1.0
@@ -71,7 +70,6 @@ public class HeapPriorityQueue<T extends Comparable<? super T>> {
 
     /**
      * Evicts the dominant root target element out of the priority queue array maps.
-     * Replaces root structural anchors and manages downward heapDown sorting loops.
      *
      * @return root array node value type matching highest sorting criteria weights
      * @throws RuntimeException if array storage maps have zero elements tracked
@@ -149,7 +147,6 @@ public class HeapPriorityQueue<T extends Comparable<? super T>> {
 
     /**
      * Retrieves an element directly by its index location.
-     * Used exclusively for iteration routines.
      *
      * @param index targeting coordinate location
      * @return object stored at the specified location

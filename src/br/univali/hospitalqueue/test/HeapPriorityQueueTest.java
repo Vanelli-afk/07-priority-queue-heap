@@ -5,7 +5,6 @@ import br.univali.hospitalqueue.model.Patient;
 
 /**
  * Automated script mock testing package routing validation parameters.
- * Validates heap transformations using the 6 scenario data matrix configurations from instructions.
  * * @author Miguel Vanelli
  * @version 1.0
  */

@@ -2,7 +2,6 @@ package br.univali.hospitalqueue.model;
 
 /**
  * Represents a generic person with a name.
- * Serving as the base class for clinical entities.
  * * @author Miguel Vanelli
  * @version 1.0
  */
