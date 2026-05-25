@@ -4,10 +4,22 @@ import java.util.Scanner;
 import br.univali.hospitalqueue.datastructure.HeapPriorityQueue;
 import br.univali.hospitalqueue.model.Patient;
 
+/**
+ * Console entry-point interface orchestration pipeline for managing patient triage flows.
+ * Handles continuous operational terminal menus and runtime inputs safely.
+ * * @author Miguel Vanelli
+ * @version 1.0
+ */
 public class Main {
 
+    /** Terminal Scanner listener instance accessing cross-method console loops. */
     private static final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Main runtime engine driving triage application lifecycle structures.
+     *
+     * @param args console startup args configuration parameters arrays
+     */
     public static void main(String[] args) {
 
         HeapPriorityQueue<Patient> queue =
@@ -44,6 +56,9 @@ public class Main {
         scanner.close();
     }
 
+    /**
+     * Renders user option layout choices inside the primary interface view loop.
+     */
     private static void printMenu() {
         System.out.println("\n=================================");
         System.out.println(" HOSPITAL PRIORITY QUEUE SYSTEM ");
@@ -56,12 +71,17 @@ public class Main {
         System.out.print("Choose an option: ");
     }
 
+    /**
+     * Prompts terminal configurations inputs to register a new Patient entity into the heap.
+     * Automatically applies string capitalization normalization algorithms on input text.
+     *
+     * @param queue references targeted priority heap instance
+     */
     private static void insertPatient(HeapPriorityQueue<Patient> queue) {
         System.out.println("\n=== INSERT PATIENT ===");
 
         System.out.print("Name: ");
         String rawName = scanner.nextLine();
-        // Aplica a capitalização automática no nome informado
         String capitalizedName = capitalizeName(rawName);
 
         System.out.print("Urgency level (1-5): ");
@@ -84,6 +104,11 @@ public class Main {
         System.out.println("\nPatient inserted successfully.");
     }
 
+    /**
+     * Extracts and prints the highest clinical priority element from the heap.
+     *
+     * @param queue references targeted priority heap instance
+     */
     private static void removePatient(HeapPriorityQueue<Patient> queue) {
         System.out.println("\n=== REMOVE PATIENT ===");
 
@@ -97,6 +122,12 @@ public class Main {
         System.out.println(removed);
     }
 
+    /**
+     * Sequentially scans active tracking arrays for matching name properties.
+     * Case-insensitive matching loops ensure accurate lookups.
+     *
+     * @param queue references targeted priority heap instance
+     */
     private static void searchPatient(HeapPriorityQueue<Patient> queue) {
         System.out.println("\n=== SEARCH PATIENT ===");
 
@@ -126,6 +157,12 @@ public class Main {
         }
     }
 
+    /**
+     * Loops through tracking indexes to format output visibility.
+     * Remaps absolute positions starting at human-readable index 1.
+     *
+     * @param queue references targeted priority heap instance
+     */
     private static void listPatients(HeapPriorityQueue<Patient> queue) {
         System.out.println("\n=== PATIENT LIST ===");
 
@@ -134,7 +171,6 @@ public class Main {
             return;
         }
 
-        // Modificado para exibir a estrutura de posições começando de 1 ao invés de 0
         System.out.println("\n=========== HEAP ===========");
         for (int i = 0; i < queue.size(); i++) {
             System.out.printf("Position %d: %s\n", (i + 1), queue.get(i));
@@ -143,7 +179,11 @@ public class Main {
     }
 
     /**
-     * Método utilitário para capitalizar nomes próprios (ex: "joão silva" -> "João Silva")
+     * Utility parser method ensuring text strings maintain standardized name capitalization structures.
+     * Transforms inputs like "mArIa sIlVa" into sanitized formats like "Maria Silva".
+     *
+     * @param str raw input string text values target
+     * @return transformed text matching Title Case guidelines
      */
     private static String capitalizeName(String str) {
         if (str == null || str.trim().isEmpty()) {

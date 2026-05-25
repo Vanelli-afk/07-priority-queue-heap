@@ -3,14 +3,24 @@ package br.univali.hospitalqueue.test;
 import br.univali.hospitalqueue.datastructure.HeapPriorityQueue;
 import br.univali.hospitalqueue.model.Patient;
 
+/**
+ * Automated script mock testing package routing validation parameters.
+ * Validates heap transformations using the 6 scenario data matrix configurations from instructions.
+ * * @author Miguel Vanelli
+ * @version 1.0
+ */
 public class HeapPriorityQueueTest {
 
+    /**
+     * Executes assertions printing internal heap changes over data ingestion metrics.
+     *
+     * @param args system console execution attributes maps
+     */
     public static void main(String[] args) {
 
         HeapPriorityQueue<Patient> queue =
                 new HeapPriorityQueue<>(10);
 
-        // Registrar a chegada dos 6 pacientes do PDF
         queue.enqueue(new Patient("Carlos", 2, 45, false));
         System.out.println(queue);
 
@@ -35,7 +45,6 @@ public class HeapPriorityQueueTest {
 
         int order = 1;
 
-        // Remoção em ordem de prioridade
         while (!queue.isEmpty()) {
             System.out.println(
                 order + " -> " + queue.dequeue()
