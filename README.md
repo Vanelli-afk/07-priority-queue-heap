@@ -31,6 +31,8 @@ Hospital triage system using a Priority Queue implemented with a Binary Heap in 
 └── .gitignore
 ```
 
+---
+
 # Project Description
 
 The Hospital **"São Binário"** needs to modernize its emergency room triage system.
