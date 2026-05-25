@@ -1,7 +1,7 @@
 package br.univali.hospitalqueue.test;
 
-import br.univali.hospitalqueue.HeapPriorityQueue;
-import br.univali.hospitalqueue.Patient;
+import br.univali.hospitalqueue.datastructure.HeapPriorityQueue;
+import br.univali.hospitalqueue.model.Patient;
 
 public class HeapPriorityQueueTest {
 
@@ -10,6 +10,7 @@ public class HeapPriorityQueueTest {
         HeapPriorityQueue<Patient> queue =
                 new HeapPriorityQueue<>(10);
 
+        // Registrar a chegada dos 6 pacientes do PDF
         queue.enqueue(new Patient("Carlos", 2, 45, false));
         System.out.println(queue);
 
@@ -34,12 +35,11 @@ public class HeapPriorityQueueTest {
 
         int order = 1;
 
+        // Remoção em ordem de prioridade
         while (!queue.isEmpty()) {
-
             System.out.println(
                 order + " -> " + queue.dequeue()
             );
-
             order++;
         }
 

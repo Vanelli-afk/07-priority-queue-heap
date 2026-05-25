@@ -112,19 +112,13 @@ Compile all project files from the project root folder:
 ## Windows
 
 ```bash
-javac -d bin src/br/univali/hospitalqueue/app/*.java ^
-src/br/univali/hospitalqueue/model/*.java ^
-src/br/univali/hospitalqueue/datastructure/*.java ^
-src/br/univali/hospitalqueue/test/*.java
+javac -d bin src/br/univali/hospitalqueue/model/*.java src/br/univali/hospitalqueue/datastructure/*.java src/br/univali/hospitalqueue/app/*.java src/br/univali/hospitalqueue/test/*.java
 ```
 
 ## Linux / MacOS
 
 ```bash
-javac -d bin src/br/univali/hospitalqueue/app/*.java \
-src/br/univali/hospitalqueue/model/*.java \
-src/br/univali/hospitalqueue/datastructure/*.java \
-src/br/univali/hospitalqueue/test/*.java
+javac -d bin $(find src -name "*.java")
 ```
 
 ---
