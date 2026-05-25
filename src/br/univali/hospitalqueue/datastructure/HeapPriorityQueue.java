@@ -90,6 +90,10 @@ public class HeapPriorityQueue<T extends Comparable<? super T>> {
         elements[j] = temp;
     }
 
+    public T get(int index) {
+    return elements[index];
+    }
+
     @Override
     public String toString() {
         if (size == 0) {
@@ -101,10 +105,10 @@ public class HeapPriorityQueue<T extends Comparable<? super T>> {
         
         for (int i = 0; i < size; i++) {
             sb.append("Position ")
-              .append(i)
-              .append(": ")
-              .append(elements[i])
-              .append("\n");
+            .append(i)
+            .append(": ")
+            .append(elements[i])
+            .append("\n");
         }
         
         sb.append("============================");
