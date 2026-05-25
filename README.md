@@ -31,8 +31,6 @@ Hospital triage system using a Priority Queue implemented with a Binary Heap in 
 └── .gitignore
 ```
 
----
-
 # Project Description
 
 The Hospital **"São Binário"** needs to modernize its emergency room triage system.
@@ -63,13 +61,9 @@ Patients are prioritized according to the following criteria:
 | 2     | Low Urgency    |
 | 1     | Non-Urgent     |
 
----
-
 ## 2. Longer Waiting Time
 
 If two patients have the same urgency level, the one waiting longer receives higher priority.
-
----
 
 ## 3. Vulnerable Group
 
@@ -89,8 +83,6 @@ A patient is considered vulnerable if:
 * Object-Oriented Programming
 * GitHub
 * Javadoc
-
----
 
 # Requirements
 
@@ -121,8 +113,6 @@ javac -d bin src/br/univali/hospitalqueue/model/*.java src/br/univali/hospitalqu
 javac -d bin $(find src -name "*.java")
 ```
 
----
-
 # Application Execution
 
 Run the interactive hospital system:
@@ -148,8 +138,6 @@ Run the heap validation test:
 java -cp bin br.univali.hospitalqueue.test.HeapPriorityQueueTest
 ```
 
----
-
 # Expected Test Output
 
 ```text
@@ -165,8 +153,6 @@ java -cp bin br.univali.hospitalqueue.test.HeapPriorityQueueTest
 =====================================
 ```
 
----
-
 # Heap Operations Implemented
 
 The project implements the classic Binary Heap operations:
@@ -175,8 +161,6 @@ The project implements the classic Binary Heap operations:
 * Dequeue (`heapDown`)
 * Swap
 * Max-Heap organization
-
----
 
 # Javadoc
 
@@ -197,8 +181,6 @@ src/br/univali/hospitalqueue/datastructure/*.java
 ```
 
 The generated documentation will be available inside the `docs/` folder.
-
----
 
 # Author
 
