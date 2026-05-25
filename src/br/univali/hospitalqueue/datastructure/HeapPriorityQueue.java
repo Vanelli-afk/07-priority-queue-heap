@@ -3,7 +3,7 @@ package br.univali.hospitalqueue.datastructure;
 /**
  * A standard generic Max-Heap structure representing a Priority Queue.
  * Array tracking ensures log(n) operational limits during data mutations.
- * * @param <T> bounded parameter extending {@link Comparable}
+ * * @param <T> bounded parameter extending Comparable
  * @author Miguel Vanelli
  * @version 1.0
  */
