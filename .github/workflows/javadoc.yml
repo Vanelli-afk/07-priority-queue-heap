@@ -24,7 +24,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Gerar Javadoc
-        run: javadoc -d doc -sourcepath src -subpackages estatica:heap:entidades
+        run: javadoc -d doc -sourcepath src -subpackages br.univali.hospitalqueue -Xdoclint:none
 
       - uses: actions/configure-pages@v4
 
