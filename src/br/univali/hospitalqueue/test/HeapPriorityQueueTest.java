@@ -1,5 +1,8 @@
 package br.univali.hospitalqueue.test;
 
+import br.univali.hospitalqueue.HeapPriorityQueue;
+import br.univali.hospitalqueue.Patient;
+
 public class HeapPriorityQueueTest {
 
     public static void main(String[] args) {
